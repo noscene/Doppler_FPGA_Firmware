@@ -1,5 +1,5 @@
-PROJ = docker_simple_io
-PIN_DEF = docker_simple_io.pcf
+PROJ = doppler_simple_io
+PIN_DEF = doppler_simple_io.pcf
 DEVICE = up5k
 
 all: $(PROJ).rpt $(PROJ).bin header
@@ -24,7 +24,7 @@ header: $(PROJ).bin
 
 prog: $(PROJ).bin
 	#iCEburn.py  -e -v -w  $<
-	curl -F file=@docker_simple_io.bin http://10.0.1.40/fupload 
+	curl -F file=@doppler_simple_io.bin http://10.0.1.40/fupload 
 
 sudo-prog: $(PROJ).bin
 	@echo 'Executing prog as root!!!'

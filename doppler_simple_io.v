@@ -41,10 +41,10 @@ module top ( inout  [7:0] pinbank1,													// breakout io pins F11,  F12 , 
 	assign  out_eneable_cfg = 24'h0;
 	
 	// sorry but sometime i need to read src like a excelsheet ;-)
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_0 	( .PACKAGE_PIN(pa19), 				.OUTPUT_ENABLE(out_eneable_cfg[0]), 	.D_OUT_0(pin_state_out[0]) , 	.D_IN_0(pin_state_in[0]) );
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_1 	( .PACKAGE_PIN(pa20), 				.OUTPUT_ENABLE(out_eneable_cfg[1]), 	.D_OUT_0(pin_state_out[1]) , 	.D_IN_0(pin_state_in[1]) );
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_2 	( .PACKAGE_PIN(pa21), 				.OUTPUT_ENABLE(out_eneable_cfg[2]), 	.D_OUT_0(pin_state_out[2]) , 	.D_IN_0(pin_state_in[2]) );
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_3 	( .PACKAGE_PIN(pa22), 				.OUTPUT_ENABLE(out_eneable_cfg[3]), 	.D_OUT_0(pin_state_out[3]) , 	.D_IN_0(pin_state_in[3]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_0 	( .PACKAGE_PIN(pa19), 				.OUTPUT_ENABLE(out_eneable_cfg[0]), 	.D_OUT_0(pin_state_out[0]) , 	.D_IN_0(pin_state_in[20]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_1 	( .PACKAGE_PIN(pa20), 				.OUTPUT_ENABLE(out_eneable_cfg[1]), 	.D_OUT_0(pin_state_out[1]) , 	.D_IN_0(pin_state_in[21]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_2 	( .PACKAGE_PIN(pa21), 				.OUTPUT_ENABLE(out_eneable_cfg[2]), 	.D_OUT_0(pin_state_out[2]) , 	.D_IN_0(pin_state_in[22]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_3 	( .PACKAGE_PIN(pa22), 				.OUTPUT_ENABLE(out_eneable_cfg[3]), 	.D_OUT_0(pin_state_out[3]) , 	.D_IN_0(pin_state_in[23]) );
  	
     SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b0) ) upin_4 	( .PACKAGE_PIN(pinbank1[0]), 	.OUTPUT_ENABLE(out_eneable_cfg[4]), 	.D_OUT_0(pin_state_out[4]) , 	.D_IN_0(pin_state_in[4]) );
     SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b0) ) upin_5 	( .PACKAGE_PIN(pinbank1[1]), 	.OUTPUT_ENABLE(out_eneable_cfg[5]), 	.D_OUT_0(pin_state_out[5]) , 	.D_IN_0(pin_state_in[5]) );
@@ -64,10 +64,10 @@ module top ( inout  [7:0] pinbank1,													// breakout io pins F11,  F12 , 
     SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_18 	( .PACKAGE_PIN(pinbank2[6]), 	.OUTPUT_ENABLE(out_eneable_cfg[18]),	.D_OUT_0(pin_state_out[18]) , .D_IN_0(pin_state_in[18]) );
     SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_19 	( .PACKAGE_PIN(pinbank2[7]), 	.OUTPUT_ENABLE(out_eneable_cfg[19]),	.D_OUT_0(pin_state_out[19]) , .D_IN_0(pin_state_in[19]) );
 	
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_20 	( .PACKAGE_PIN(button1), 		.OUTPUT_ENABLE(1'b0), 							.D_OUT_0(pin_state_out[20]) , .D_IN_0(pin_state_in[20]) );
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_21 	( .PACKAGE_PIN(button2), 		.OUTPUT_ENABLE(1'b0), 							.D_OUT_0(pin_state_out[21]) , .D_IN_0(pin_state_in[21]) ); 
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_22 	( .PACKAGE_PIN(F25), 				.OUTPUT_ENABLE(out_eneable_cfg[22]), 	.D_OUT_0(pin_state_out[22]) , .D_IN_0(pin_state_in[22]) );
-    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_23 	( .PACKAGE_PIN(F32), 				.OUTPUT_ENABLE(out_eneable_cfg[23]), 	.D_OUT_0(pin_state_out[23]) , .D_IN_0(pin_state_in[23]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_20 	( .PACKAGE_PIN(button1), 		.OUTPUT_ENABLE(1'b0), 							.D_OUT_0(pin_state_out[20]) , .D_IN_0(pin_state_in[0]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_21 	( .PACKAGE_PIN(button2), 		.OUTPUT_ENABLE(1'b0), 							.D_OUT_0(pin_state_out[21]) , .D_IN_0(pin_state_in[1]) ); 
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_22 	( .PACKAGE_PIN(F25), 				.OUTPUT_ENABLE(out_eneable_cfg[22]), 	.D_OUT_0(pin_state_out[22]) , .D_IN_0(pin_state_in[2]) );
+    SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_23 	( .PACKAGE_PIN(F32), 				.OUTPUT_ENABLE(out_eneable_cfg[23]), 	.D_OUT_0(pin_state_out[23]) , .D_IN_0(pin_state_in[3]) );
 
 
 	
@@ -115,11 +115,12 @@ module top ( inout  [7:0] pinbank1,													// breakout io pins F11,  F12 , 
 	reg [15:0]		miso_shift;
 	assign cfg_so = miso_shift[15];
 	always @(posedge clk) begin
-		if(spi_cs_negedge) begin
+		if(spi_cs_posedge) begin
 			data16 			<= spi_in;							// Just Write data 2 LED
+		end else if(spi_cs_negedge) begin
 			// miso_shift 	<= data16; 					// loopbackTest
-			// miso_shift 	<= pin_state_in[15:0];	// PinRead
-			miso_shift 	<= 16'h53f0;					// constValues answer just for tesing
+			miso_shift 	<= pin_state_in[15:0];	// PinRead
+			//miso_shift 	<= 16'h53f0;					// constValues answer just for tesing
 		end else begin
 			if(spi_clk_posedge)		spi_in[15:0] 			<= {spi_in[14:0] , 			mosi};
 			if(spi_clk_posedge)		miso_shift[15:0] 	<= {miso_shift[14:0] , 	1'b1};
@@ -147,7 +148,7 @@ module LED16 (input wire clk, input  [15:0] ledbits , output reg  [3:0] aled ,  
 	end
  
 	// Show 16bit values
-	always @(posedge counter[3])	begin // do the logic
+	always @(posedge counter[4])	begin // do the logic
 		case ( counter[8:5] )	 
 			4'b0000:		begin   kled_tri[3:0]  <= ledbits[0]   ? 4'b0001 :  4'd0 ;	 	   aled[3:0] <=	 4'b1110; 	end	
 			4'b0001:   	begin   kled_tri[3:0]  <= ledbits[1]   ? 4'b0001 :  4'd0;	 	   aled[3:0] <=	 4'b1101; 	end	
