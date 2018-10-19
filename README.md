@@ -23,5 +23,5 @@ make
 ls -l
 ```
 
-now we have this bitstream docker_simple_io.bin and also
-as header docker_simple_io.h
+now we have this bitstream doppler_simple_io.bin and also
+as header doppler_simple_io.h
