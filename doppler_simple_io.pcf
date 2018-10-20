@@ -13,20 +13,19 @@ set_io kled[3] 45
 set_io button1 2 
 set_io button2 3
 
-# interface to samd51 and breakout
-set_io pa19 6 		# CS				sercom: 1.3/3.3		arduino pin: 9
-set_io pa20 4		# MISO			sercom: 5.2/3.2		arduino pin: 10
-set_io pa21 9		# MOSI			sercom: 5.3/3.3		arduino pin: 11 
-set_io pa22 10		# CLK			sercom: 3.0/5.1		arduino pin: 13
+# interface to samd51(sercom5) and breakout
+set_io pa19 6 		# CS				sercom: 1.3/3.3		arduino pin: 11
+set_io pa20 4		# MISO			sercom: 5.2/3.2		arduino pin: 12
+set_io pa21 9		# MOSI			sercom: 5.3/3.3		arduino pin: 13 
+set_io pa22 10		# CLK			sercom: 3.0/5.1		arduino pin: 14
 
-# program and spi
-set_io cfg_so	14		#		PB02 sercom:  n.a/5.0	arduino pin: 6
-set_io cfg_sck	15		#		PB03 sercom:  n.a/5.1	arduino pin: 8
-set_io cfg_cs		16		#		PB22 sercom:  1.2/5.2	arduino pin: 3
-set_io cfg_si 		17		#		PB23 sercom:  1.3/5.3	arduino pin: 23
-# reset pa17 arduino pin: 1
-# reset pa16 arduino pin: 0
-
+# program and spi (sercom5)
+set_io cfg_so	14		#		PB02 sercom:  n.a/5.0	arduino pin: 23
+set_io cfg_sck	15		#		PB03 sercom:  n.a/5.1	arduino pin: 21
+set_io cfg_cs		16		#		PB22 sercom:  1.2/5.2	arduino pin: 24
+set_io cfg_si 		17		#		PB23 sercom:  1.3/5.3	arduino pin: 22
+# reset  pa17 arduino pin: 26
+# cdone pa16 arduino pin: 25
 
 # Pins Breakout Downside
 set_io pinbank1[0] 11
