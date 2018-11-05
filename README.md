@@ -18,7 +18,7 @@ docker run -it -v $MOUNTPOINT:/PRJ icestorm  bash
 now we are in the container
 
 ```
-cd PRJ/
+cd PRJ/doppler_simple_io/
 make
 ls -l
 ```
