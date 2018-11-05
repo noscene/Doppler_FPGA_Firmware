@@ -1,5 +1,5 @@
-PROJ = PCM5102
-PIN_DEF = PCM5102.pcf
+PROJ = synth
+PIN_DEF = synth.pcf
 DEVICE = up5k
 
 all: $(PROJ).rpt $(PROJ).bin header
@@ -24,7 +24,7 @@ header: $(PROJ).bin
 
 prog: $(PROJ).bin
 	#iCEburn.py  -e -v -w  $<
-	curl -F file=@PCM5102.bin http://10.0.1.40/fupload 
+	curl -F file=@synth.bin http://10.0.1.40/fupload
 
 sudo-prog: $(PROJ).bin
 	@echo 'Executing prog as root!!!'

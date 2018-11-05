@@ -1,0 +1,27 @@
+
+
+
+# I2S Pins using for PCM5102
+set_io I2S_BCLK  11 #F0
+set_io I2S_DATA  12 #F1
+set_io I2S_LR    13 #F2
+
+# SPI Port to SAMD51 on doppler
+set_io miso     14		#		PB02 sercom:  n.a/5.0	arduino pin: 23
+set_io sck      15		#		PB03 sercom:  n.a/5.1	arduino pin: 21
+set_io cs       16		#		PB22 sercom:  1.2/5.2	arduino pin: 24
+set_io mosi     17		#		PB23 sercom:  1.3/5.3	arduino pin: 22
+
+# Buttons on doppler
+set_io button1 2			# DPIO
+set_io button2 3
+
+# 4x4 led matrix
+set_io aled[0] 26
+set_io aled[1] 27
+set_io aled[2] 28
+set_io aled[3] 31
+set_io kled[0] 42
+set_io kled[1] 43
+set_io kled[2] 44
+set_io kled[3] 45
