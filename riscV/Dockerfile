@@ -24,7 +24,7 @@ mkdir build; cd build && \
 make -j$(nproc) && \
 cd /root && \
 rm -Rf /root/riscv-gnu-toolchain-rv32i  && \
-echo export PATH='/opt/riscv32i/bin:$PATH' >> ~/.bash_profile
+echo export PATH='/opt/riscv32i/bin:$PATH' >> ~/.bashrc
 
 
 
