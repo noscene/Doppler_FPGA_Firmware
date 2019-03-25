@@ -1,9 +1,7 @@
 # icestorm riscv32i build chain for ice40up5k
 FROM ubuntu:bionic
 MAINTAINER Sven Braun <s.braun@mobileonly.com>
-#EXPOSE 80 3306
-FROM ubuntu:bionic
-MAINTAINER Sven Braun <s.braun@mobileonly.com>
+
 # setup ubuntu and add ecp5
 RUN export DEBIAN_FRONTEND="noninteractive" && apt-get update  && apt-get -y install  build-essential autoconf sudo automake autotools-dev clang bison flex libreadline-dev libtool wget \
 patchutils bc libexpat1-dev zlib1g-dev gawk tcl-dev libffi-dev git libmpc-dev libmpfr-dev libgmp-dev gawk texinfo gperf libtool mercurial \
@@ -36,9 +34,3 @@ make -j$(nproc) && \
 cd /root && \
 rm -Rf /root/riscv-gnu-toolchain-rv32i  && \
 echo export PATH='/opt/riscv32i/bin:$PATH' >> ~/.bashrc
-
-
-
-
-
-#CMD  /etc/init.d/mysql start && apachectl -DFOREGROUND
