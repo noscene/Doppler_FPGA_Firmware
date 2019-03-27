@@ -44,7 +44,6 @@ docker build -t riscv  riscV/
 #
 export MOUNTPOINT=`pwd`
 docker run -it -v $MOUNTPOINT:/PRJ riscv  bash
-export PATH=/opt/riscv32i/bin:$PATH
 ```
 
 
