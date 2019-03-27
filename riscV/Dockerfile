@@ -26,15 +26,13 @@ rm -Rf /root/nextpnr
 RUN mkdir /opt/riscv32i  && cd /root  && \
 git clone https://github.com/riscv/riscv-gnu-toolchain riscv-gnu-toolchain-rv32i && \
 cd riscv-gnu-toolchain-rv32i && \
-git checkout c3ad555 && \
+git checkout 411d134 && \
 git submodule update --init --recursive && \
 mkdir build; cd build && \
 ../configure --with-arch=rv32i --prefix=/opt/riscv32i && \
 make -j$(nproc) && \
 cd /root && \
-rm -Rf /root/riscv-gnu-toolchain-rv32i  && \
-echo export PATH='/opt/riscv32i/bin:$PATH' >> ~/.bashrc
+rm -Rf /root/riscv-gnu-toolchain-rv32i  
 
 
 ENV PATH="/opt/riscv32i/bin:${PATH}"
-
