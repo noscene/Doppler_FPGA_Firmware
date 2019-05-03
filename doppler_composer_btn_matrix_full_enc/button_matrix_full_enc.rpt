@@ -1,0 +1,43 @@
+
+icetime topological timing analysis report
+==========================================
+
+Info: max_span_hack is enabled: estimate is conservative.
+
+Report for critical path:
+-------------------------
+
+        lc40_18_2_3 (LogicCell40) [clk] -> lcout: 1.491 ns
+     1.491 ns net_68192 (spi_cs1)
+        t302 (LocalMux) I -> O: 1.099 ns
+        inmux_18_3_72223_72283 (InMux) I -> O: 0.662 ns
+        lc40_18_3_5 (LogicCell40) in0 -> lcout: 1.285 ns
+     4.537 ns net_68353 (spi_cs_negedge)
+        odrv_18_3_68353_37834 (Odrv12) I -> O: 1.232 ns
+        t331 (Span12Mux_h12) I -> O: 1.232 ns
+        t330 (Span12Mux_v12) I -> O: 1.073 ns
+        t329 (Span12Mux_v12) I -> O: 1.073 ns
+        t369 (Span12Mux_h12) I -> O: 1.232 ns
+        t368 (Sp12to4) I -> O: 0.848 ns
+        t367 (Span4Mux_v4) I -> O: 0.649 ns
+        t366 (LocalMux) I -> O: 1.099 ns
+        inmux_18_29_75419_75469 (InMux) I -> O: 0.662 ns
+        lc40_18_29_3 (LogicCell40) in0 -> lcout: 1.285 ns
+    14.921 ns net_71549 ($abc$2071$auto$rtlil.cc:1819:NotGate$2067)
+        odrv_18_29_71549_74403 (Odrv12) I -> O: 1.232 ns
+        t387 (Sp12to4) I -> O: 0.848 ns
+        t386 (LocalMux) I -> O: 1.099 ns
+        inmux_18_29_75431_75499 (SRMux) I -> O: 0.636 ns
+    18.735 ns net_75499 ($abc$2071$auto$rtlil.cc:1819:NotGate$2067)
+        lc40_18_29_5 (LogicCell40) sr [setup]: 0.384 ns
+    19.119 ns net_71551 (miso_shift[0])
+
+Resolvable net names on path:
+     1.491 ns ..  3.252 ns spi_cs1
+     4.537 ns .. 13.636 ns spi_cs_negedge
+    14.921 ns .. 18.735 ns $abc$2071$auto$rtlil.cc:1819:NotGate$2067
+                  lcout -> miso_shift[0]
+
+Total number of logic levels: 3
+Total path delay: 19.12 ns (52.30 MHz)
+
