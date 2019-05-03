@@ -1,7 +1,7 @@
 # Composer Pin Mapping to FPGA
 
-set_io encoderA		12
-set_io encoderB		13
+set_io encoderPinA		12
+set_io encoderPinB		13
 set_io encoderPinBtn	11
 
 set_io ws2812		10

@@ -8,7 +8,7 @@ module top ( output [12:0] row,
 					   input  [17:0] col,
 						 input cfg_cs,  	input  cfg_si,  input cfg_sck,				// SPI:     samd51 <-> ice40  for bitstream and user cases
 						 output cfg_so,																			  	// SPI: miso
-						input encoderA,input encoderB, input encoderPinBtn
+						input encoderPinA,input encoderPinB, input encoderPinBtn
 					 );
 
 	// use ice40up5k 48Mhz internal oscillator
@@ -17,6 +17,11 @@ module top ( output [12:0] row,
 
 
 	// inputs pins from Matrix with PULLUP
+	wire encoderA,encoderB;
+	SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_ena 	( .PACKAGE_PIN(encoderPinA), 	.OUTPUT_ENABLE(1'b0),	.D_OUT_0(1'b0) , .D_IN_0(encoderA) );
+	SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_enb 	( .PACKAGE_PIN(encoderPinB), 	.OUTPUT_ENABLE(1'b0),	.D_OUT_0(1'b0) , .D_IN_0(encoderB) );
+
+
 
 	wire encoderBtn;
 	SB_IO #( .PIN_TYPE(6'b 1010_01), .PULLUP(1'b1) ) upin_eb 	( .PACKAGE_PIN(encoderPinBtn), 	.OUTPUT_ENABLE(1'b0),	.D_OUT_0(1'b0) , .D_IN_0(encoderBtn) );
